@@ -10,11 +10,9 @@
 </div>
 
 
-function myFunction() {
-  alert("This works")
-}
 
-<form action="/action_page.php" onsubmit="myFunction()">
+
+<form action="/" onsubmit="myFunction()">
   <label for="fnum">First number:</label>
   <input type="text" id="fnum" name="fnum"><br><br>
   <label for="lnum">Last number:</label>
@@ -31,6 +29,11 @@ function myFunction() {
 <script src="react/build/react-dom.js"></script>
 
 <script>
+  function myFunction() {
+      alert("This works")
+  }
+      
+      
   ReactDOM.render(
     React.DOM.h1(null, "Hello World!"),
     document.getElementById("app")
