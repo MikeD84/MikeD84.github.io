@@ -12,7 +12,7 @@
 
 
 
-<form action="/" onsubmit="myFunction()">
+<form action="/return" onsubmit="myFunction()">
   <label for="fnum">First number:</label>
   <input type="text" id="fnum" name="fnum"><br><br>
   <label for="lnum">Last number:</label>
@@ -31,12 +31,9 @@
 <script>
   function myFunction() {
       var value1 = document.getElementById("fnum").value;
-      alert(value1)
       var value2 = document.getElementById("lnum").value;
-      alert(value2)
       var result = value1 * value2
       alert(result)
-        
   }
       
       
