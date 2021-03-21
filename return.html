@@ -3,6 +3,25 @@
 <script>
   var link = window.location.href;
   link = link.replace("http://michealdavidson.co.zw/return?", "");
-  document.write("This is the result:" + link + "");
+  var res = link.split("&");
+  var value1 = res[0].replace("fnum=","");
+  var value2 = res[1].replace("lnum=","");
+  
+  function myFunction() {
+    var valueX = document.getElementById("code").value;
+    if (valueX == value1 * value2) {
+      return true;
+    }
+    return false;
+        
+      
+  }
+  
 </script>
  
+<form action="/" onsubmit="myFunction()">
+  <label for="code">Enter Code:</label>
+  <input type="text" id="code" name="code"><br><br>
+  
+  <input type="submit" value="Submit">
+</form>
