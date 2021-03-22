@@ -1,26 +1,31 @@
-<div>TEST WORLD</div>
-
-<script>
-  var link = window.location.href;
-  link = link.replace("http://michealdavidson.co.zw/return?", "");
-  var res = link.split("&");
-  var value1 = res[0].replace("fnum=","");
-  var value2 = res[1].replace("lnum=","");
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var link = window.location.href;
+      link = link.replace("http://michealdavidson.co.zw/return?", "");
+      var res = link.split("&");
+      var value1 = res[0].replace("fnum=","");
+      var value2 = res[1].replace("lnum=","");
   
-  function myFunction() {
-    var valueX = document.getElementById("code").value;
-    if (valueX == value1 * value2) {
-      return true;
-    }
-    return false;
-        
-  }
+      function myFunction() {
+        var valueX = document.getElementById("code").value;
+        if (valueX == value1 * value2) {
+          return true;
+        }
+        alert("Code must be correct");
+        return false;  
+      }
+    </script>
+  </head>
   
-</script>
- 
-<form action="/" onsubmit="return myFunction()">
-  <label for="code">Enter Code:</label>
-  <input type="text" id="code" name="code"><br><br>
+  <body>
+    <div>TEST WORLD</div> 
+    <form action="/index.html" onsubmit="return myFunction()" method="post">
+      <label for="code">Enter Code:</label>
+      <input type="text" id="code" name="code"><br><br>
   
-  <input type="submit" value="Submit">
-</form>
+      <input type="submit" value="Submit">
+     </form>
+  </body>
+</html>
