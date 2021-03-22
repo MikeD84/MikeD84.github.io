@@ -1,44 +1,44 @@
-<link rel="stylesheet"
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet"
       type="text/css"
       href="http://github.com/MikeD84/miked84.github.io/blob/main/index.css"
-/>
+    />
+    <title>Hello, world!</title>
+  </head>
 
-<title>Hello, world!</title>
+  <body>
+    <div class="container">
+      <h1>Helloooooo. World</h1>
+    </div>
 
-<div class="container">
-  <h1>Helloooooo. World</h1>
-</div>
+    <form action="/return" onsubmit="myFunction()">
+      <label for="fnum">First number:</label>
+      <input type="text" id="fnum" name="fnum"><br><br>
+      <label for="lnum">Last number:</label>
+      <input type="text" id="lnum" name="lnum"><br><br>
+      <input type="submit" value="Submit">
+    </form>
 
-
-
-
-<form action="/return" onsubmit="myFunction()">
-  <label for="fnum">First number:</label>
-  <input type="text" id="fnum" name="fnum"><br><br>
-  <label for="lnum">Last number:</label>
-  <input type="text" id="lnum" name="lnum"><br><br>
-  <input type="submit" value="Submit">
-</form>
-
-
-
-<div id="app">
+    <div id="app">
       <!-- my app renders here -->
-</div>
-<script src="react/build/react.js"></script>
-<script src="react/build/react-dom.js"></script>
+    </div>
+    <script src="react/build/react.js"></script>
+    <script src="react/build/react-dom.js"></script>
 
-<script>
-  function myFunction() {
-      var value1 = document.getElementById("fnum").value;
-      var value2 = document.getElementById("lnum").value;
-      var result = value1 * value2
-      alert(result)
-  }
+    <script>
+      function myFunction() {
+        var value1 = document.getElementById("fnum").value;
+        var value2 = document.getElementById("lnum").value;
+        var result = value1 * value2
+        alert(result)
+      }
       
-      
-  ReactDOM.render(
-    React.DOM.h1(null, "Hello World!"),
-    document.getElementById("app")
-  );
-</script>
+      ReactDOM.render(
+        React.DOM.h1(null, "Hello World!"),
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>
