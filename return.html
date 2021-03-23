@@ -9,9 +9,6 @@
       var res = link.split("&");
       var value1 = res[0].replace("fnum=","");
       var value2 = res[1].replace("lnum=","");
-      alert(value1);
-      alert(value2);
-      
   
       function myFunction() {
         
@@ -27,7 +24,7 @@
   
   <body>
     <div>TEST WORLD</div> 
-    <form action="/index" onsubmit="return myFunction()" method="post">
+    <form action="/" onsubmit="return myFunction()" method="post">
       <label for="code">Enter Code:</label>
       <input type="text" id="code" name="code"><br><br>
   
